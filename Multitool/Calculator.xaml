@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Multitool.Calculator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Multitool"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <!-- Поле для отображения результата -->
+        <TextBox x:Name="Display" FontSize="24" Margin="10" HorizontalAlignment="Stretch" IsReadOnly="True" />
+
+        <!-- Сетка для кнопок -->
+        <UniformGrid Rows="4" Columns="4" Margin="10,50,10,10">
+            <!-- Кнопки цифр -->
+            <Button Content="1" Click="Button_Click"/>
+            <Button Content="2" Click="Button_Click"/>
+            <Button Content="3" Click="Button_Click"/>
+            <!-- Кнопка операции "+" -->
+            <Button Content="+" Click="Operation_Click"/>
+
+            <Button Content="4" Click="Button_Click"/>
+            <Button Content="5" Click="Button_Click"/>
+            <Button Content="6" Click="Button_Click"/>
+            <!-- Кнопка операции "-" -->
+            <Button Content="-" Click="Operation_Click"/>
+
+            <Button Content="7" Click="Button_Click"/>
+            <Button Content="8" Click="Button_Click"/>
+            <Button Content="9" Click="Button_Click"/>
+            <!-- Кнопка операции "*" -->
+            <Button Content="*" Click="Operation_Click"/>
+
+            <!-- Кнопка очистки -->
+            <Button Content="C" Click="Clear_Click"/>
+            <Button Content="0" Click="Button_Click"/>
+            <!-- Кнопка "равно" -->
+            <Button Content="=" Click="Equals_Click"/>
+            <!-- Кнопка операции "/" -->
+            <Button Content="/" Click="Operation_Click"/>
+        </UniformGrid>
+    </Grid>
+</UserControl>
